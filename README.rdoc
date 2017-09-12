@@ -1,28 +1,6 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is the front end webpage of a personal product I'm working on as a side project.  The concept is to build upon some previous CRM solutions I've built and tailor it to professional Podcasters and social media influencers to help them manage thier sponsor relationships.
 
-Things you may want to cover:
+This application includes a simple landing page with a "sign up" form that allows interested parties to enter thier contact information.  This is placed in the database (Postgresql) and is behind a login wall.  User authentication is done using Devise, with registration disabled as I am the only user.  This application is live using Heroku for hosting and can be seen at www.PodcastMatic.com.
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
