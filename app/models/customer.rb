@@ -1,4 +1,4 @@
 class Customer < ActiveRecord::Base
 
-	validates_presence_of :name, :email, :podcast 
+	validates_presence_of :name, :email 
 end

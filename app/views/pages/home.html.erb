@@ -21,11 +21,12 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="intro-message">
-                        <h1>PodcastMatic</h1>
-                        <div class="wrapped">
-                        <h3>Sponsor Relationship Software that makes it easier for you to communicate with, manage, and close more sponsors for your podcast and sponsored promotions</h3>
-                        </div>
+                        <h2>Start your podcast in 62 seconds with</h2><h1> PodcastMatic</h1>
+                        
                         <hr class="intro-divider">
+                        <div class="wrapped">
+                        <h3>100% cloud-based podcast recording & hosting for entrepreneurs </h3>
+                        </div>
                         <ul class="list-inline intro-social-buttons">
                             <li>
   <!--                               <a href="mailto:patrick@airportaccount.com?subject=I'd like a demo!" class="btn btn-info btn-lg"><i class="fa fa-linkedin fa-fw"></i> <span class="network-name">Request a Demo</span></a><br><br>
@@ -57,12 +58,9 @@
             <div class="row">
                 <div class="col-lg-5 col-sm-6">
                     <div class="clearfix"></div>
-                    <h2 class="section-heading">We're building the world's best platform to manage your podcast sponsors and paid promotions</h2>
-                    <p class="lead">Want to find more sponsors? <br><br>
-                    	Want to better manage and communicate with the ones you already have? <br><br>
-                    	That's awesome, because that's what were building for you!  We're world class developers building sponsor management software for professional podcasters and social media influencers.  
-                    </p>
+              <!--       <h2 class="section-heading">We make podcasting as easy as just hitting record</h2> -->
 
+                <%= render "pricing" %>
                 </div>
                 <div class="col-lg-5 col-lg-offset-2 col-sm-6">
                 	<h2> Early access opens Fall 2017</h2>
@@ -82,20 +80,16 @@
 						  <% end %>
 
 						  <div class="field">
-						    <%= f.label :email %><br>
+						    <%= f.label :email %><i class="red"> (required)</i><br>
 						    <%= f.email_field :email %>
 						  </div>
 						  <div class="field">
-						    <%= f.label :name %><br>
+						    <%= f.label :name %><i class="red"> (required)</i><br>
 						    <%= f.text_field :name %>
 						  </div>
 						  <div class="field">
 						    <%= f.label :website %><br>
 						    <%= f.text_field :website %>
-						  </div>
-						  <div class="field">
-						    <%= f.label :podcast %><br>
-						    <%= f.text_field :podcast %>
 						  </div>
                           <%= recaptcha_tags %>
                           <br>
