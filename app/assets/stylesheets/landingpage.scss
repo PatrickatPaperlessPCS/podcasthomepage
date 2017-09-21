@@ -20,11 +20,15 @@ h6 {
 }
 
 ul.check {
-list-style-image: url(check2.png);
+list-style-image: url(check2.png); 
 }
 
 .wrapped {
 
+}
+
+.center {
+  text-align: center;
 }
 
 .red {
@@ -32,8 +36,14 @@ list-style-image: url(check2.png);
   font-weight: lighter;
 }
 .lead {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 400;
+}
+
+.leadul {
+    font-size: 16px;
+    font-weight: 400;
+
 }
 
 .intro-header {
@@ -250,6 +260,13 @@ Pricing table
 .pricing-head-active h4 {
   color: #446CB3;
 }
+
+.pricing-head-active h5 {
+  color: #446CB3;
+  font-weight: 300;
+  font-size: 45px;
+}
+
 
 .pricing-head h4 i {
   top: -8px;
