@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Inquries</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Brand</th>
+      <th>Type</th>
+      <th>Email</th>
+      <th>Budget</th>
+      <th>Seeking</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @inquries.each do |inqury| %>
+      <tr>
+        <td><%= inqury.name %></td>
+        <td><%= inqury.brand %></td>
+        <td><%= inqury.promo_type %></td>
+        <td><%= inqury.email %></td>
+        <td><%= inqury.budget %></td>
+        <td><%= inqury.seeking %></td>
+        <td><%= link_to 'Show', inqury %></td>
+        <td><%= link_to 'Edit', edit_inqury_path(inqury) %></td>
+        <td><%= link_to 'Destroy', inqury, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Inqury', new_inqury_path %>

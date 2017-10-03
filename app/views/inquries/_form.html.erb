@@ -1,0 +1,41 @@
+<%= form_for(@inqury) do |f| %>
+  <% if @inqury.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@inqury.errors.count, "error") %> prohibited this inqury from being saved:</h2>
+
+      <ul>
+      <% @inqury.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :brand %><br>
+    <%= f.text_field :brand %>
+  </div>
+  <div class="field">
+    Promo Type<br>
+    <%= f.text_field :promo_type %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br>
+    <%= f.email_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :budget %><br>
+    <%= f.text_field :budget %>
+  </div>
+  <div class="field">
+    <%= f.label :seeking %><br>
+    <%= f.text_area :seeking %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

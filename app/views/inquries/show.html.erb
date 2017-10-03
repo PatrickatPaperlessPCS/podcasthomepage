@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @inqury.name %>
+</p>
+
+<p>
+  <strong>Brand:</strong>
+  <%= @inqury.brand %>
+</p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @inqury.promo_type %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @inqury.email %>
+</p>
+
+<p>
+  <strong>Budget:</strong>
+  <%= @inqury.budget %>
+</p>
+
+<p>
+  <strong>Seeking:</strong>
+  <%= @inqury.seeking %>
+</p>
+
+<%= link_to 'Edit', edit_inqury_path(@inqury) %> |
+<%= link_to 'Back', inquries_path %>

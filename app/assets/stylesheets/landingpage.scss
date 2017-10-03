@@ -56,10 +56,20 @@ list-style-image: url(check2.png);
     padding-bottom: 50px;
     text-align: center;
     color: #f8f8f8;
-    background: url(mic2.jpg) no-repeat center center;
+    background: url(audience.png) no-repeat center center;
     background-size: cover;
+
 }
 
+.intro-message h2 {
+  text-shadow: 3px 3px 3px #f2f2f2;
+  color: #1a1a1a;
+}
+
+.intro-message h3 {
+  text-shadow: 2px 2px 3px #f2f2f2;
+  color: black;
+}
 .intro-header-information {
     padding-top: 50px; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
     padding-bottom: 50px;
@@ -69,10 +79,19 @@ list-style-image: url(check2.png);
     background-size: cover;
 }
 
+.targeted {
+  color: #cc3300;
+}
 .intro-message {
     position: relative;
     padding-top: 20%;
     padding-bottom: 20%;
+}
+
+.btn-lg:active
+.btn-lg:hover,
+.btn-lg:focus, {
+  background-color: white;
 }
 
 .intro-message > h1 {
@@ -136,7 +155,18 @@ list-style-image: url(check2.png);
 .section-heading {
     margin-bottom: 30px;
 }
-
+.page-content {
+  padding: 50px;
+}
+.section-z {
+    max-width: 1000px;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: .5px;
+}
+.padding-z {
+  padding-top: 25px;
+}
 .section-heading-spacer {
     float: left;
     width: 200px;

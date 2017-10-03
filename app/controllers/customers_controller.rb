@@ -27,8 +27,7 @@ class CustomersController < ApplicationController
     @customer = Customer.new(customer_params)
 
     respond_to do |format|
-      if 
-        verify_recaptcha(model: @customer) && @customer.save
+      if verify_recaptcha(model: @customer) && @customer.save
         format.html { redirect_to pages_thanks_path }
         format.json { render :show, status: :created, location: @customer }
       else
@@ -70,6 +69,6 @@ class CustomersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def customer_params
-      params.require(:customer).permit(:email, :name, :website, :podcast)
+      params.require(:customer).permit(:email, :name, :website, :podcast, :facebook, :instagram, :youtube)
     end
 end

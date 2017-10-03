@@ -1,0 +1,123 @@
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Custom Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+    <!-- Header -->
+    <a name="about"></a>
+    <div class="intro-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="intro-message">
+                        <div id="clockdiv"><h2>Reach your target market through influencers with</h2></div>
+                        <h1>
+                            <%= image_tag('target.png', height: '100', width: '100') %>
+                            <span class="targeted">Targeted</span>Influence</h1>
+                        
+                        <hr class="intro-divider">
+                        <div class="wrapped">
+                        <h3>Join in the rapidly growing influencer marketing segment</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /.intro-header -->
+
+    <!-- Page Content -->
+<!--     <div class="content-section-a">
+        <center>
+    Video Placeholder
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/XkMGVJ3Cosk" frameborder="0" allowfullscreen></iframe>
+	   </center>
+    </div> -->
+
+<div class="page-content">
+<center>
+<h2 class="padding-z">What does Targeted Influence do?</h2>
+<p class="section-z">We match up influencers to brands in their segment to promote products and services that are an ideal fit for their audenience.  Influencer marketing is the fastest growing segment of online promotion - and for good reason - influcencers are as passionate about their space as thier audience, meaning they'll be highly engaged and much more likely to convert into a customer of yours!
+</p>
+<h2 class="padding-z">How do we do it?</h2>
+<p class="section-z">We've built a huge database of influencers from Podcast Hosts to Instagram Stars who've shown an interest in promoting brands that align with their audience and their views.  When you put in a request for a match, we'll search our database to find a fit for your brand.  If there's a fit, we'll arrange the promotion on your behalf and remit payment to the influencer once the promotion is complete.  
+
+</p>
+<h2 class="padding-z">What types of brands are good fit for Targeted Influence?</h2>
+<p class="section-z">We rarely run across a brand we can't help in some way thanks to the diversity of our influencers.  Whether you're promoting a software company or a dog food brand, we've got an influencer who can help you get the word out.
+
+</p>
+<h2 class="padding-z">What types of promotion can Targeted Influence do?</h2>
+<p class="section-z">Our service covers the entire spectrum of paid promotion - including product placement, video ads, testimonials, or voice ads.  
+
+</p>
+<h2 class="padding-z">How much does your service cost?</h2>
+<p class="section-z">Total costs are largely dependent on the size of the influencer's audience, but track nicely with going CPM rates for highly targeted audiences.
+
+</p>
+<hr>
+<h1>Want to know more?</h1>
+<%= form_for(@inqury) do |f| %>
+  <% if @inqury.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@inqury.errors.count, "error") %> prohibited this inqury from being saved:</h2>
+
+      <ul>
+      <% @inqury.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    Brand name
+    <%= f.text_field :brand %>
+  </div>
+  <div class="field">
+    Are you a brand or an agency?
+    <%= f.text_field :promo_type %>
+  </div>
+  <div class="field">
+    My email address
+    <%= f.email_field :email %>
+  </div>
+  <div class="field">
+    Budget<i> (optional)</i>
+    <%= f.text_field :budget %>
+  </div>
+    I'd like to know more about <%= f.text_field :seeking %>
+
+<%= flash[:recaptcha_error] %>
+<%= recaptcha_tags %>
+  <div class="actions">
+    <%= button_to('Contact Me', new_inqury_path, class: 'btn btn-large btn-primary')  %>
+  </div>
+
+<% end %>
+</div>
+</div>
+   <% if user_signed_in? %>
+  <li>
+  <%= link_to('Logout', destroy_user_session_path, method: :delete) %>        
+  </li>
+<% end %>
+
+
+<%= link_to "Privacy Policy", pages_privacy_path %>

@@ -1,11 +1,15 @@
 Rails.application.routes.draw do
+  resources :inquries
   devise_for :users
   devise_for :admins
   resources :customers
   root 'pages#home'
   get 'pages/moreinfo' => 'customers#new'
   get 'pages/thanks'
+  get 'pages/brands_thanks'
   get 'pages/privacy'
+  get 'pages/brands'
+  get 'pages/influencer'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
